@@ -70,6 +70,110 @@ html, body{
     flex: 1 1 100%;
 }
 
+.home-content{
+    width: 1339px;
+    height: 336px;
+    margin: 0 auto;
+    padding: 349px 162px 115px 653px;
+}
+.home-content-text{
+    width: 665px;
+    height: 129px;
+}
+.home-content-text .context-head-usual{
+    width: 625px;
+    height: 45px;
+    text-shadow: 0 1px 3px rgba(25, 22, 24, 0.36);
+    color: #ffffff;
+    font-size: 48px;
+    font-family: "Lato Light", serif;
+    font-weight: 300;
+}
+.home-content-text .context_head-highlighted{
+    font-family: "Lato - Bold", serif;
+    font-weight: 700;
+}
+.home-content-text .context-description{
+    display: flex;
+    width: 665px;
+    height: 60px;
+    color: #ffffff;
+    font-family: Lato, 'serif';
+    font-size: 18px;
+    font-weight: 300;
+}
+button,
+button:active,
+button:focus {
+    outline: none;
+}
+.home-content-button{
+    width: 431px;
+    height: 65px;
+    margin-top: 40px;
+}
+.btn-download{
+    display: inline-block;
+    width: 196px;
+    height: 65px;
+    border: 0;
+    background: url("../img/Base.png");
+}
+.btn-download span {
+    width: 90px;
+    height: 11px;
+    color: #ffffff;
+    font-family: Lato, 'serif';
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.btn-learn-more{
+    width: 196px;
+    height: 61px;
+    border: 0;
+    box-shadow: 0 4px 0 #277697;
+    background: url("../img/blueBase.png");
+}
+.btn-learn-more span{
+    width: 94px;
+    height: 11px;
+    color: #fefefe;
+    font-family: Lato, 'serif';
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.container-link{
+    width: 1339px;
+    height: 55px;
+}
+.home-content-available{
+    display: flex;
+    margin-top: 49px;
+    width: 251px;
+    height: 53px;
+}
+.home-content-available span{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 109px;
+    height: 13px;
+    color: #ffffff;
+    font-family: Lato, 'serif';
+    font-size: 18px;
+    font-weight: 300;
+}
+.apple-icon{
+    width: 53px;
+    height: 53px;
+}
+.android-icon{
+    width: 54px;
+    height: 53px;
+}
+
+
 .home-sections__features{
     height: 100vh;
     background: url("../img/BaseFeatures.png") no-repeat;
@@ -135,6 +239,258 @@ html, body{
     line-height: 22px;
 }
 
+.video{
+    display: flex;
+    width: 1480px;
+    height: 550px;
+    background: url("../img/imageVideo.png");
+}
+
+.btn-play-video{
+    display: flex;
+    width: 116px;
+    height: 75px;
+    background: url("../img/buttonPlayVideo.png");
+}
+.video-content-text {
+    display: flex;
+    flex-direction: column;
+}
+.video-content-text__header{
+    text-shadow: 0 1px 3px rgba(25, 22, 24, 0.36);
+    color: #ffffff;
+    font-size: 48px;
+
+    font-family: "Lato Light", 'serif';
+    font-weight: 300;
+}
+.video-content-text__header-action{
+    font-family: "Lato - Bold", 'serif';
+    font-weight: 700;
+}
+.video-content-text__description{
+    color: #ffffff;
+    font-family: Lato, 'serif';
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.price-header{
+    display: flex;
+    flex-direction: column;
+}
+
+.price-content__item{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 415px;
+    border: 1px solid rgb(218, 215, 215);
+    background-color: rgb(249, 249, 249);
+}
+
+.price-content__item-value{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 115px;
+    background-color: rgb(145, 196, 107);
+    text-align: center;
+}
+
+.price-content__item-value span{
+    text-shadow: 0 1px 2px rgba(25, 22, 24, 0.3);
+    color: rgb(255, 255, 255);
+    font-family: "Droid Sans";
+    font-size: 85px;
+    font-weight: 700;
+    line-height: 27.49px;
+    text-transform: uppercase;
+}
+
+.price-content__item-header{
+    color: rgb(215, 215, 215);
+    font-family: Lato;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 27.49px;
+    text-transform: uppercase;
+}
+
+.price-content__item-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 171px;
+    height: 49px;
+    background-color: rgb(145, 196, 107);
+}
+
+.price-content__item-button span{
+    width: 77px;
+    height: 11px;
+    color: rgb(254, 254, 254);
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.price-content__item-descr span{
+    color: rgb(215, 215, 215);
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.price-content__item-descr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-header__main{
+    color: rgb(65, 64, 66);
+    font-family: "Lato - Black";
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.price-header__sub{
+    color: rgb(65, 64, 66);
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.price-content__item:nth-child(2){
+    width: 370px;
+    height: 455px;
+}
+
+.price-content__item:nth-child(2) .price-content__item-button{
+    background-color: rgb(75, 202, 255);
+}
+
+.price-content__item:nth-child(2) .price-content__item-value{
+    background-color: rgb(75, 202, 255);
+}
+
+.price-content__item:nth-child(2) .price-content__item-header{
+    color: rgb(75, 202, 255);
+}
+
+.price-content__item:nth-child(2) .price-content__item-descr span{
+    color: rgb(75, 202, 255);
+}
+
+.price-content__item:nth-child(3) .price-content__item-button{
+    background-color: rgb(253, 124, 0);
+}
+
+.price-content__item:nth-child(3) .price-content__item-value{
+    background-color: rgb(253, 124, 0);
+}
+
+
+
+
+
+
+.testimonials{
+    display: flex;
+    width: 1480px;
+    height: 381px;
+    background-color: #f9f9f9;
+}
+
+.testimonials-content__icon{
+    width: 141px;
+    height: 159px;
+}
+.testimonials-content{
+    display: flex;
+    align-items: center;
+    width: 513px;
+    height: 159px;
+}
+.testimonials-header{
+    display: flex;
+    color: #414042;
+    font-family: "Lato - Black", serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+.testimonials-content_text{
+    margin-left: 39px;
+}
+.testimonials-content_text__quote{
+    color: #4bcaff;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "Lato - Bold", serif;
+    font-weight: 700;
+    letter-spacing: -0.14px;
+}
+.testimonials-content_text__author{
+    float: right;
+    text-align: right;
+    font-family: "Lato - Bold Italic", serif;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -0.14px;
+}
+
+
+.download{
+    height: 210px;
+    background-color: rgb(65, 64, 66);
+}
+
+.download-content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-content span{
+    text-shadow: 0 1px 3px rgba(25, 22, 24, 0.36);
+    color: rgb(255, 255, 255);
+    font-family: Lato;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.download-button{
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 196px;
+    height: 61px;
+    box-shadow: 0 4px 0 rgb(39, 118, 151);
+    background-color: rgb(75, 202, 255);
+    text-align: center;
+}
+
+.download-button span{
+    color: rgb(65, 64, 66);
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* КАРТА ФОРМА*/
+
 .map{
     height: 100vh;
     background: url("../img/Map.png") no-repeat;
@@ -143,6 +499,8 @@ html, body{
 
 .contact-form{
     width: 324px;
+    display: flex;
+    justify-content: space-between;
     height: 460px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15), 0 0 0 rgba(0, 0, 0, 0.1);
     background-color: rgba(75, 202, 255, 0.6);
@@ -153,6 +511,10 @@ html, body{
     -ms-border-radius:5px;
 }
 
+.form-item{
+    width: 100%;
+}
+
 .form-control {
     height: 35px;
     text-align: center;
@@ -160,6 +522,10 @@ html, body{
 
 .map form{
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     width: 324px;
     height: 460px;
     padding: 14px;
@@ -167,6 +533,7 @@ html, body{
 
 .button{
     width: 192px;
+    border-radius: 5px;
     height: 46px;
     box-shadow: 0 4px 0 rgb(49, 48, 50);
     color: rgb(75, 202, 255);
@@ -180,25 +547,9 @@ html, body{
     font-weight: 700;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Футер*/
 .footer {
-    display: flex;
-    align-items: center;
+
     background-color: rgb(65, 64, 66);
     padding-top: 40px;
     padding-bottom: 40px;
@@ -214,12 +565,9 @@ footer span {
 
 }
 
-.footer-left{
+.footer-content{
     display: flex;
-}
-
-.footer-right{
-    display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
 }
 
