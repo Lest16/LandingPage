@@ -70,60 +70,26 @@ html, body{
     flex: 1 1 100%;
 }
 
-.home-content{
-    width: 1339px;
-    height: 336px;
-    margin: 0 auto;
-    padding: 349px 162px 115px 653px;
-}
-.home-content-text{
-    width: 665px;
-    height: 129px;
-}
-.home-content-text .context-head-usual{
-    width: 625px;
-    height: 45px;
-    text-shadow: 0 1px 3px rgba(25, 22, 24, 0.36);
-    color: #ffffff;
-    font-size: 48px;
-    font-family: "Lato Light", serif;
-    font-weight: 300;
-}
-.home-content-text .context_head-highlighted{
-    font-family: "Lato - Bold", serif;
-    font-weight: 700;
-}
-.home-content-text .context-description{
+.home-first-screen-content{
     display: flex;
-    width: 665px;
-    height: 60px;
-    color: #ffffff;
-    font-family: Lato, 'serif';
-    font-size: 18px;
-    font-weight: 300;
+    flex-direction: column;
 }
-button,
-button:active,
-button:focus {
-    outline: none;
-}
-.home-content-button{
+
+.home-first-screen-button{
+    display: flex;
+    align-items: center;
     width: 431px;
-    height: 65px;
-    margin-top: 40px;
+    justify-content: space-between;
 }
 .btn-download{
-    display: inline-block;
     width: 196px;
     height: 65px;
-    border: 0;
-    background: url("../img/Base.png");
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(114, 179, 204, 0);
+    border-radius: 5px;
 }
 .btn-download span {
-    width: 90px;
-    height: 11px;
-    color: #ffffff;
-    font-family: Lato, 'serif';
+    color: rgb(255, 255, 255);
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
@@ -131,47 +97,54 @@ button:focus {
 .btn-learn-more{
     width: 196px;
     height: 61px;
-    border: 0;
-    box-shadow: 0 4px 0 #277697;
-    background: url("../img/blueBase.png");
+    box-shadow: 0 4px 0 rgb(39, 118, 151);
+    background-color: rgb(75, 202, 255);
+    border-radius: 5px;
+    border: none;
 }
 .btn-learn-more span{
-    width: 94px;
-    height: 11px;
-    color: #fefefe;
-    font-family: Lato, 'serif';
+    color: rgb(255, 255, 255);
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
 }
-.container-link{
-    width: 1339px;
-    height: 55px;
-}
-.home-content-available{
+.content-text{
     display: flex;
-    margin-top: 49px;
-    width: 251px;
-    height: 53px;
+    flex-direction: column;
 }
-.home-content-available span{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 109px;
-    height: 13px;
-    color: #ffffff;
-    font-family: Lato, 'serif';
+
+.content-head{
+    text-shadow: 0 1px 3px rgba(25, 22, 24, 0.36);
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.content-head__bold{
+    font-weight: 700;
+}
+.content-description{
+    color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 300;
 }
-.apple-icon{
+.home-content-available{
+    display: flex;
+    align-items: center;
+    width: 251px;
+    justify-content: space-between;
+}
+
+.home-content-available span{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 300;
+}
+.mobile-icon{
     width: 53px;
     height: 53px;
 }
-.android-icon{
-    width: 54px;
-    height: 53px;
-}
+
 
 
 .home-sections__features{
@@ -237,6 +210,12 @@ button:focus {
     font-size: 13px;
     font-weight: 400;
     line-height: 22px;
+}
+
+.img-gallery{
+    width: 270px;
+    height: 200px;
+    opacity: 0.4;
 }
 
 .video{
@@ -379,6 +358,8 @@ button:focus {
 
 .price-content__item:nth-child(2) .price-content__item-value{
     background-color: rgb(75, 202, 255);
+    width: 370px;
+    height: 115px;
 }
 
 .price-content__item:nth-child(2) .price-content__item-header{
