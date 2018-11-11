@@ -35,6 +35,11 @@ html, body{
     margin-top: -100px;
     background: url("../img/Base.png") no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 115px;
+    justify-content: flex-end;
 }
 
 .flex-container{
@@ -73,6 +78,8 @@ html, body{
 .home-first-screen-content{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 55%;
 }
 
 .home-first-screen-button{
@@ -80,6 +87,7 @@ html, body{
     align-items: center;
     width: 431px;
     justify-content: space-between;
+    margin-top: 40px;
 }
 .btn-download{
     width: 196px;
@@ -95,6 +103,20 @@ html, body{
     text-transform: uppercase;
 }
 .btn-learn-more{
+    /*width: 196px;
+    height: 61px;
+    box-shadow: 0 4px 0 rgb(39, 118, 151);
+    background-color: rgb(75, 202, 255);
+    border-radius: 5px;
+    border: none;*/
+    width: 196px;
+    height: 65px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(114, 179, 204, 0);
+    border-radius: 5px;
+
+}
+.btn-download:hover{
     width: 196px;
     height: 61px;
     box-shadow: 0 4px 0 rgb(39, 118, 151);
@@ -102,6 +124,16 @@ html, body{
     border-radius: 5px;
     border: none;
 }
+
+.btn-learn-more:hover{
+    width: 196px;
+    height: 61px;
+    box-shadow: 0 4px 0 rgb(39, 118, 151);
+    background-color: rgb(75, 202, 255);
+    border-radius: 5px;
+    border: none;
+}
+
 .btn-learn-more span{
     color: rgb(255, 255, 255);
     font-size: 15px;
@@ -127,12 +159,14 @@ html, body{
     color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 300;
+    margin-top: 24px;
 }
 .home-content-available{
     display: flex;
     align-items: center;
     width: 251px;
     justify-content: space-between;
+    margin-top: 49px;
 }
 
 .home-content-available span{
@@ -145,12 +179,18 @@ html, body{
     height: 53px;
 }
 
-
-
 .home-sections__features{
     height: 100vh;
     background: url("../img/BaseFeatures.png") no-repeat;
     background-size: cover;
+}
+
+.features-container{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .img-features{
@@ -161,20 +201,17 @@ html, body{
 
 .feature-heading__span{
     color: rgb(65, 64, 66);
-    font-family: Lato;
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 400;
 }
 
 .feature-content__span{
     color: rgb(65, 64, 66);
-    font-family: Lato;
     font-size: 20px;
     font-weight: 300;
 }
 
-.heading-content{
+.price-content__heading-content{
     display: flex;
     flex-direction: column
 }
@@ -182,9 +219,12 @@ html, body{
 .features-row{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .features-content{
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align:center;
@@ -218,11 +258,35 @@ html, body{
     opacity: 0.4;
 }
 
-.video{
+.home-sections__gallery{
+    width: 100%;
+    height: 575px;
+
+}
+
+.container-gallery{
     display: flex;
-    width: 1480px;
-    height: 550px;
-    background: url("../img/imageVideo.png");
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video{
+    height: 100vh;
+    display: flex;
+    background: url("../img/imageVideo.png") no-repeat;
+    background-size: cover;
+}
+
+.video-container{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 747px;
 }
 
 .btn-play-video{
@@ -234,10 +298,12 @@ html, body{
 .video-content-text {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 38px;
 }
 .video-content-text__header{
     text-shadow: 0 1px 3px rgba(25, 22, 24, 0.36);
-    color: #ffffff;
+    color: rgb(255, 255, 255);
     font-size: 48px;
 
     font-family: "Lato Light", 'serif';
@@ -248,15 +314,47 @@ html, body{
     font-weight: 700;
 }
 .video-content-text__description{
-    color: #ffffff;
+    text-align: left;
+    margin-top: 27px;
+    width: 665px;
+    color: rgb(255, 255, 255);
     font-family: Lato, 'serif';
     font-size: 18px;
     font-weight: 300;
 }
 
+
+.price{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100vh;
+}
+
+.price-content__heading-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .price-header{
     display: flex;
     flex-direction: column;
+}
+
+.price-content__items{
+    display: flex;
+    width: 1028px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .price-content__item{
@@ -309,8 +407,6 @@ html, body{
 }
 
 .price-content__item-button span{
-    width: 77px;
-    height: 11px;
     color: rgb(254, 254, 254);
     font-family: Lato;
     font-size: 15px;
@@ -384,10 +480,17 @@ html, body{
 
 
 .testimonials{
+    background-color: rgb(249, 249, 249);
+    width: 100%;
+    height: 380px;
+}
+
+.testimonials-container{
     display: flex;
-    width: 1480px;
-    height: 381px;
-    background-color: #f9f9f9;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .testimonials-content__icon{
@@ -402,7 +505,7 @@ html, body{
 }
 .testimonials-header{
     display: flex;
-    color: #414042;
+    color: rgb(65, 64, 66);
     font-family: "Lato - Black", serif;
     font-size: 36px;
     font-weight: 400;
@@ -411,12 +514,11 @@ html, body{
     margin-left: 39px;
 }
 .testimonials-content_text__quote{
-    color: #4bcaff;
+    color: rgb(75, 202, 255);
     font-size: 14px;
     line-height: 18px;
     font-family: "Lato - Bold", serif;
     font-weight: 700;
-    letter-spacing: -0.14px;
 }
 .testimonials-content_text__author{
     float: right;
@@ -519,6 +621,7 @@ html, body{
     box-shadow: 0 4px 0 rgb(49, 48, 50);
     color: rgb(75, 202, 255);
     background-color: rgb(65, 64, 66);
+    cursor: pointer;
 }
 
 .map form span{
@@ -526,6 +629,13 @@ html, body{
     font-family: Lato;
     font-size: 36px;
     font-weight: 700;
+}
+
+.map-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 /* Футер*/

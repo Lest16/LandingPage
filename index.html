@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width">
+    <title>Bazinger</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -53,9 +53,9 @@
         </div>
     </div>
     <section class="home-sections__features">
-        <div class="container ">
+        <div class="container features-container">
 
-            <div class="heading-content">
+            <div class="price-content__heading-content">
                 <span class="feature-heading__span">summarise the features</span>
                 <span class="feature-content__span">summarise what your product is all about</span>
             </div>
@@ -89,16 +89,14 @@
                     <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta
                         nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
                 </div>
-
-
             </div>
         </div>
     </section>
 
     <section class="home-sections__gallery">
-        <div class="container">
+        <div class="container container-gallery">
 
-            <div class="heading-content">
+            <div class="price-content__heading-content">
                 <span class="feature-heading__span">show the gallery</span>
                 <span class="feature-content__span">summarise what your product is all about</span>
             </div>
@@ -135,7 +133,7 @@
     </section>
 
     <section class="video">
-        <div class="container">
+        <div class="container video-container">
             <div class="btn-play-video">
             </div>
             <div class="video-content-text">
@@ -149,75 +147,71 @@
     </section>
 
 
-    <section>
-        <div class="container">
-            <div class="price">
-                <div class="heading-content">
-                    <span class="feature-heading__span">choose your price</span>
-                    <span class="feature-content__span">summarise what your product is all about</span>
+    <section class="price">
+        <div class="container price-content">
+
+            <div class="price-content__heading-content">
+                <span class="feature-heading__span">choose your price</span>
+                <span class="feature-content__span">summarise what your product is all about</span>
+            </div>
+
+            <div class="price-content__items">
+                <div class="price-content__item">
+                    <div class="price-content__item-header">
+                        <span>Basic Package</span>
+                    </div>
+                    <div class="price-content__item-value">
+                        <span>20$</span>
+                    </div>
+                    <div class="price-content__item-descr">
+                        <span>Nullam suscipit vitae</span>
+                        <span>Etiam faucibus</span>
+                        <span>Vivamus viverra</span>
+                    </div>
+                    <a href="#">
+                        <button class="price-content__item-button"><span>purchase</span></button>
+                    </a>
                 </div>
-
-                <div class="price-content">
-                    <div class="price-content__item">
-                        <div class="price-content__item-header">
-                            <span>Basic Package</span>
-                        </div>
-                        <div class="price-content__item-value">
-                            <span>20$</span>
-                        </div>
-                        <div class="price-content__item-descr">
-                            <span>Nullam suscipit vitae</span>
-                            <span>Etiam faucibus</span>
-                            <span>Vivamus viverra</span>
-                        </div>
-                        <div class="price-content__item-button">
-                            <span>purchase</span>
-                        </div>
+                <div class="price-content__item">
+                    <div class="price-content__item-header">
+                        <span>Professional Package</span>
                     </div>
-                    <div class="price-content__item">
 
-                        <div class="price-content__item-header">
-                            <span>Professional Package</span>
-                        </div>
-
-                        <div class="price-content__item-value">
-                            <span>25$</span>
-                        </div>
-
-                        <div class="price-content__item-descr">
-                            <span>Nullam suscipit vitae</span>
-                            <span>Etiam faucibus</span>
-                            <span>Vivamus viverra</span>
-                            <span>Praesent pharetra</span>
-                        </div>
-
-                        <div class="price-content__item-button">
-                            <span>purchase</span>
-                        </div>
+                    <div class="price-content__item-value">
+                        <span>25$</span>
                     </div>
-                    <div class="price-content__item">
-                        <div class="price-content__item-header">
-                            <span>Advanced Package</span>
-                        </div>
-                        <div class="price-content__item-value">
-                            <span>30$</span>
-                        </div>
-                        <div class="price-content__item-descr">
-                            <span>Nullam suscipit vitae</span>
-                            <span>Etiam faucibus</span>
-                            <span>Vivamus viverra</span>
-                        </div>
-                        <div class="price-content__item-button">
-                            <span>purchase</span>
-                        </div>
+                    <div class="price-content__item-descr">
+                        <span>Nullam suscipit vitae</span>
+                        <span>Etiam faucibus</span>
+                        <span>Vivamus viverra</span>
+                        <span>Praesent pharetra</span>
                     </div>
+                    <a href="#">
+                        <button class="price-content__item-button"><span>purchase</span></button>
+                    </a>
+                </div>
+                <div class="price-content__item">
+                    <div class="price-content__item-header">
+                        <span>Advanced Package</span>
+                    </div>
+                    <div class="price-content__item-value">
+                        <span>30$</span>
+                    </div>
+                    <div class="price-content__item-descr">
+                        <span>Nullam suscipit vitae</span>
+                        <span>Etiam faucibus</span>
+                        <span>Vivamus viverra</span>
+                    </div>
+                    <a href="#">
+                        <button class="price-content__item-button"><span>purchase</span></button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="testimonials">
-        <div class="container">
+        <div class="container testimonials-container">
             <span class="testimonials-header">Testimonials</span>
             <div class="testimonials-content">
                 <div class="testimonials-content__icon">
@@ -236,39 +230,37 @@
     </section>
 
     <section class="download">
-        <div class="container">
-            <div class="download-content">
-                <span>Do you like this app?</span>
-                <div class="download-button"><span>download now</span></div>
-            </div>
+        <div class="container download-content">
+            <span>Do you like this app?</span>
+            <a href="#">
+                <button class="download-button"><span>download now</span></button>
+            </a>
         </div>
     </section>
 
     <section class="map">
-        <div class="container">
-            <div>
-                <div class="contact-form">
-                    <form>
-                        <span>Contact</span>
-                        <div class="form-item">
-                            <input type="text" class="form-control" placeholder="Your Name">
-                        </div>
+        <div class="container map-container">
+            <div class="contact-form">
+                <form method="post">
+                    <span>Contact</span>
+                    <div class="form-item">
+                        <input type="text" name="contactName" class="form-control" placeholder="Your Name">
+                    </div>
 
-                        <div class="form-item">
-                            <input type="email" class="form-control" placeholder="Your Email">
-                        </div>
+                    <div class="form-item">
+                        <input type="email" name="contactEmail" class="form-control" placeholder="Your Email">
+                    </div>
 
-                        <div class="form-item">
-                            <input type="text" class="form-control" placeholder="Your Subject">
-                        </div>
+                    <div class="form-item">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject">
+                    </div>
 
-                        <div class="form-item">
-                            <textarea class="form-control" rows="7" placeholder="Message"></textarea>
-                        </div>
+                    <div class="form-item">
+                        <textarea class="form-control" name="message" rows="7" placeholder="Message"></textarea>
+                    </div>
 
-                        <button type="submit" class="button">Send</button>
-                    </form>
-                </div>
+                    <button type="submit" class="button">Send</button>
+                </form>
             </div>
         </div>
     </section>
