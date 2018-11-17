@@ -2,6 +2,10 @@ html, body{
     box-sizing: border-box;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 *{
     box-sizing: inherit;
 }
@@ -13,6 +17,13 @@ html, body{
 .container{
     width: 1230px;
     margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100%;
 }
 
 .site-header{
@@ -69,11 +80,13 @@ html, body{
 
 .main-menu a:hover{
     color: rgb(75, 202, 255);
+    border-top: 3px solid #4bcaff;
 }
 
 .site-header__menu{
     flex: 1 1 100%;
 }
+
 
 .home-first-screen-content{
     display: flex;
@@ -90,6 +103,10 @@ html, body{
     margin-top: 40px;
 }
 .btn-download{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     width: 196px;
     height: 65px;
     border: 2px solid rgb(255, 255, 255);
@@ -103,18 +120,15 @@ html, body{
     text-transform: uppercase;
 }
 .btn-learn-more{
-    /*width: 196px;
-    height: 61px;
-    box-shadow: 0 4px 0 rgb(39, 118, 151);
-    background-color: rgb(75, 202, 255);
-    border-radius: 5px;
-    border: none;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     width: 196px;
     height: 65px;
     border: 2px solid rgb(255, 255, 255);
     background-color: rgba(114, 179, 204, 0);
     border-radius: 5px;
-
 }
 .btn-download:hover{
     width: 196px;
@@ -123,6 +137,7 @@ html, body{
     background-color: rgb(75, 202, 255);
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 
 .btn-learn-more:hover{
@@ -132,6 +147,7 @@ html, body{
     background-color: rgb(75, 202, 255);
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 
 .btn-learn-more span{
@@ -174,9 +190,10 @@ html, body{
     font-size: 18px;
     font-weight: 300;
 }
-.mobile-icon{
-    width: 53px;
-    height: 53px;
+
+.mobile-icon:hover{
+    border-radius: 30px;
+    box-shadow: 0 0 0 2pt #555555;
 }
 
 .home-sections__features{
@@ -195,8 +212,16 @@ html, body{
 
 .img-features{
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 170px;
     height: 170px;
+    background-image: url("../img/featuresUnActive.png");
+}
+
+.img-features:hover{
+    background-image: url("../img/featuresActive.png");
 }
 
 .feature-heading__span{
@@ -228,7 +253,6 @@ html, body{
     flex-direction: column;
     align-items: center;
     text-align:center;
-    width: 219px;
     height: 316px;
 }
 
@@ -255,7 +279,6 @@ html, body{
 .img-gallery{
     width: 270px;
     height: 200px;
-    opacity: 0.4;
 }
 
 .home-sections__gallery{
@@ -273,12 +296,39 @@ html, body{
 }
 
 .gallery-content{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align:center;
     width: 270px;
     height: 302px;
+}
+
+.plus{
+    width: 270px;
+    height: 159px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.img-overlay{
+    background: rgb(94, 129, 192);
+    position:absolute;
+    z-index: -2;
+    width: 270px;
+    height: 159px;
+    border-radius: 6px;
+    opacity: 0.4;
+}
+
+
+
+.gallery-content:hover .img-overlay{
+    z-index: 16;
 }
 
 .video{
@@ -415,6 +465,10 @@ html, body{
     background-color: rgb(145, 196, 107);
 }
 
+.price-content__item-button:hover{
+    background: #333;
+}
+
 .price-content__item-button span{
     color: rgb(254, 254, 254);
     font-family: Lato;
@@ -461,6 +515,10 @@ html, body{
     background-color: rgb(75, 202, 255);
 }
 
+.price-content__item:nth-child(2) .price-content__item-button:hover{
+    background: #333;
+}
+
 .price-content__item:nth-child(2) .price-content__item-value{
     background-color: rgb(75, 202, 255);
     width: 370px;
@@ -477,6 +535,10 @@ html, body{
 
 .price-content__item:nth-child(3) .price-content__item-button{
     background-color: rgb(253, 124, 0);
+}
+
+.price-content__item:nth-child(3) .price-content__item-button:hover{
+    background: #333;
 }
 
 .price-content__item:nth-child(3) .price-content__item-value{
@@ -574,6 +636,12 @@ html, body{
     text-align: center;
 }
 
+.download-button:hover{
+    border: 1px solid #269abc;
+    box-shadow: none;
+    background: #5bc0de;
+}
+
 .download-button span{
     color: rgb(65, 64, 66);
     font-size: 15px;
@@ -631,6 +699,12 @@ html, body{
     color: rgb(75, 202, 255);
     background-color: rgb(65, 64, 66);
     cursor: pointer;
+}
+
+.button:hover{
+    border: 1px solid #269abc;
+    box-shadow: none;
+    background: #5e5e5e;
 }
 
 .map form span{

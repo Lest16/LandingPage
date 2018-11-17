@@ -41,21 +41,21 @@
                         fringilla lacinia. Nullam pulvinar sollicitudin velit id laoreet. Quisque non rhoncus sem.</span>
         </div>
         <div class="home-first-screen-button">
-            <a href="#">
+            <a class="btn-download" href="#">
                 <!-- FIXME: убрать тег button -->
-                <button class="btn-download"><span>Download</span></button>
+                <span>Download</span>
             </a>
-            <a href="#">
+            <a class="btn-learn-more" href="#">
                 <!-- FIXME: убрать тег button -->
-                <button class="btn-learn-more"><span>Learn More</span></button>
+                <span>Learn More</span>
             </a>
         </div>
         <div class="home-content-available">
             <span>Available on :</span>
 
             <!-- FIXME: сделать ссылками -->
-            <img src="assets/img/apple.png" class="mobile-icon">
-            <img src="assets/img/android.png" class="mobile-icon">
+            <a href="#" class="mobile-icon"><img src="assets/img/apple.png"></a>
+            <a href="#" class="mobile-icon"><img src="assets/img/android.png"></a>
         </div>
         <!--FIXME: конец слайда -->
     </div>
@@ -68,32 +68,50 @@
             <span class="feature-content__span">summarise what your product is all about</span>
         </div>
         <!-- FIXME: сделать через сетку -->
-        <div class="features-row">
-            <div class="features-content">
-                <img class="img-features" src="assets/img/features1.png">
-                <span class="feature-title">Attractive Layout</span>
-                <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12 ">
+                <div class="features-content">
+                    <div class="img-features">
+                        <img class="" src="assets/img/features1.png">
+                    </div>
+
+                    <span class="feature-title">Attractive Layout</span>
+                    <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa
                         idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
-            </div>
-            <div class="features-content">
-                <img class="img-features" src="assets/img/features2.png">
-                <span class="feature-title">Fresh Design</span>
-                <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta
-                        nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
+                </div>
             </div>
 
-            <div class="features-content">
-                <img class="img-features" src="assets/img/features3.png">
-                <span class="feature-title">Multipurpose</span>
-                <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque
+            <div class="col-md-3 col-sm-6 col-xs-12 ">
+                <div class="features-content">
+                    <div class="img-features">
+                        <img class="" src="assets/img/features2.png">
+                    </div>
+                    <span class="feature-title">Fresh Design</span>
+                    <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta
+                        nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12 ">
+                <div class="features-content">
+                    <div class="img-features">
+                        <img class="" src="assets/img/features3.png">
+                    </div>
+                    <span class="feature-title">Multipurpose</span>
+                    <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque
                         mi id faucibus iaculis vitae pulvinar.</span>
+                </div>
             </div>
 
-            <div class="features-content">
-                <img class="img-features" src="assets/img/features4.png">
-                <span class="feature-title">Easy to customize</span>
-                <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta
+            <div class="col-md-3 col-sm-6 col-xs-12 ">
+                <div class="features-content">
+                    <div class="img-features">
+                        <img class="" src="assets/img/features4.png">
+                    </div>
+                    <span class="feature-title">Easy to customize</span>
+                    <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta
                         nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
+                </div>
             </div>
         </div>
     </div>
@@ -107,33 +125,42 @@
             <span class="feature-content__span">summarise what your product is all about</span>
         </div>
 
-        <div class="features-row">
+        <div class="row">
             <!-- FIXME: сделать через сетку -->
-            <div class="gallery-content">
-                <img class="img-gallery" src="assets/img/gallery1.png">
-                <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="gallery-content">
+                    <div class="img-overlay"><div class="plus"><img src="assets/img/plus.png"></div></div>
+                    <img class="img-gallery" src="assets/img/gallery2.png">
+
+                    <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa
                         idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
+                </div>
             </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="gallery-content">
 
-            <div class="gallery-content">
-                <img class="img-gallery" src="assets/img/gallery2.png">
-                <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta
+                    <div class="img-overlay"><div class="plus"><img src="assets/img/plus.png"></div></div>
+                    <img class="img-gallery" src="assets/img/gallery2.png">
+                    <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta
                         nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
+                </div>
             </div>
-
-            <div class="gallery-content">
-                <img class="img-gallery" src="assets/img/gallery3.png">
-                <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="gallery-content">
+                    <div class="img-overlay"><div class="plus"><img src="assets/img/plus.png"></div></div>
+                    <img class="img-gallery" src="assets/img/gallery3.png">
+                    <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque
                         mi id faucibus iaculis vitae pulvinar.</span>
+                </div>
             </div>
-
-            <div class="gallery-content">
-                <img class="img-gallery" src="assets/img/gallery4.png">
-                <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="gallery-content">
+                    <div class="img-overlay"><div class="plus"><img src="assets/img/plus.png"></div></div>
+                    <img class="img-gallery" src="assets/img/gallery4.png">
+                    <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta
                         nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
+                </div>
             </div>
-
-
         </div>
     </div>
 </section>
@@ -174,9 +201,9 @@
                     <span>Etiam faucibus</span>
                     <span>Vivamus viverra</span>
                 </div>
-                <a href="#">
+                <a class="price-content__item-button" href="#">
                     <!-- FIXME: убрать тег button -->
-                    <button class="price-content__item-button"><span>purchase</span></button>
+                    <span>purchase</span>
                 </a>
             </div>
             <div class="price-content__item">
@@ -193,9 +220,9 @@
                     <span>Vivamus viverra</span>
                     <span>Praesent pharetra</span>
                 </div>
-                <a href="#">
+                <a class="price-content__item-button" href="#">
                     <!-- FIXME: убрать тег button -->
-                    <button class="price-content__item-button"><span>purchase</span></button>
+                    <span>purchase</span>
                 </a>
             </div>
             <div class="price-content__item">
@@ -210,9 +237,9 @@
                     <span>Etiam faucibus</span>
                     <span>Vivamus viverra</span>
                 </div>
-                <a href="#">
+                <a class="price-content__item-button" href="#">
                     <!-- FIXME: убрать тег button -->
-                    <button class="price-content__item-button"><span>purchase</span></button>
+                    <span>purchase</span>
                 </a>
             </div>
         </div>
@@ -243,9 +270,9 @@
 <section class="download">
     <div class="container download-content">
         <span>Do you like this app?</span>
-        <a href="#">
+        <a class="download-button" href="#">
             <!-- FIXME: убрать тег button -->
-            <button class="download-button"><span>download now</span></button>
+            <span>download now</span>
         </a>
     </div>
 </section>
@@ -283,7 +310,7 @@
             <span>Copyright &#169 2013 |BAZINGER| All Rights Reserved</span>
 
             <!-- FIXME: сделать ссылками "Terms of Service|policy"-->
-            <span>Terms of Service|policy</span>
+            <a href="#"> <span>Terms of Service|policy</span> </a>
         </div>
     </div>
 </footer>
