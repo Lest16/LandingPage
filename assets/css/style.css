@@ -26,6 +26,109 @@ a:hover {
     width: 100%;
 }
 
+.slick-container{
+    max-width: 100%;
+}
+
+.slick-testimonials .slick-dots li.slick-active button {
+    width: 50px;
+    height: 6px;
+    background-color: rgb(75, 202, 255);
+
+}
+
+.slick-testimonials .slick-dots li{
+    margin-right: 34px;
+}
+
+.slick-testimonials .slick-dots li button {
+    width: 50px;
+    height: 6px;
+    background-color: rgba(75, 202, 255, 0.32);
+    margin-right: 10px;
+}
+.slick-testimonials .slick-dots{
+    list-style: none;
+    font-size: 0;
+}
+.slick-testimonials .slick-dots li button:before {
+    content: '';
+}
+
+.slick-home .slick-dots li.slick-active button {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #4bcaff;
+    background-color: #4bcaff;
+}
+.slick-home .slick-dots li button {
+    width: 10px;
+    height: 11px;
+    border: 1px solid #ffffff;
+    border-radius: 7px;
+    cursor: pointer;
+    color: transparent;
+}
+.slick-home .slick-dots{
+    list-style: none;
+    font-size: 0;
+}
+.slick-home .slick-dots li button:before {
+    content: '';
+}
+
+.slick-home .slick-next{
+    width: 55px;
+    height: 55px;
+    border-radius: 40px;
+    background: url("../img/arrow_unactive_right.png");
+}
+
+.slick-home .slick-prev{
+    width: 55px;
+    height: 55px;
+    border-radius: 40px;
+    background: url("../img/arrow_unactive.png");
+}
+
+.slick-slide{
+    padding: 10px;
+}
+.slick-home .slick-prev{
+    left: -55px;
+}
+
+.slick-home .slick-next{
+    right: -55px;
+}
+
+.slick-home .slick-next:hover{
+    width: 55px;
+    height: 55px;
+    border-radius: 40px;
+    background: url("../img/arrow_active.png");
+}
+
+.slick-home .slick-prev:hover{
+    width: 55px;
+    height: 55px;
+    border-radius: 40px;
+    background: url("../img/arrow_active_left.png");
+}
+
+.slick-testimonials .slick-prev,
+.slick-testimonials .slick-next {
+    display:none;
+}
+
+.slick-next:before {
+    content: '';
+}
+
+.slick-prev:before {
+    content: '';
+}
+
 .site-header{
     height: 100px;
     background-color: rgba(7, 7, 7, 0.3);
@@ -92,8 +195,10 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 55%;
+    width: 100%;
 }
+
+
 
 .home-first-screen-button{
     display: flex;

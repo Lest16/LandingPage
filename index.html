@@ -6,6 +6,9 @@
     <title>Bazinger</title>
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/js/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/js/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="assets/js/dist/jquery.fancybox.css" type="text/css" media="screen" />
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -30,37 +33,70 @@
     </div>
 </header>
 <div class="home-first-screen">
-    <div class="home-first-screen-content">
-        <!--FIXME: Начало слайда -->
-        <div>
-            <div class="content-text">
+    <div class="container">
+        <div class="home-first-screen-content">
+            <!--FIXME: Начало слайда -->
+            <div class="slick-container slick-home">
+                <div>
+                    <div class="content-text">
 
-                <span class="content-head">Simple, Beautiful <span class="content-head__bold">and Amazing</span></span>
-                <span class="content-description">
+                        <span class="content-head">Simple, Beautiful <span class="content-head__bold">and Amazing</span></span>
+                        <span class="content-description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget nunc vitae tellus luctus
                             ullamcorper. Nam porttitor ullamcorper felis at convallis. Aenean ornare vestibulum nisi
                             fringilla lacinia. Nullam pulvinar sollicitudin velit id laoreet. Quisque non rhoncus sem.</span>
-            </div>
-            <div class="home-first-screen-button">
-                <a class="btn-download" href="#">
-                    <!-- FIXME: убрать тег button -->
-                    <span>Download</span>
-                </a>
-                <a class="btn-learn-more" href="#">
-                    <!-- FIXME: убрать тег button -->
-                    <span>Learn More</span>
-                </a>
-            </div>
-            <div class="home-content-available">
-                <span>Available on :</span>
+                    </div>
+                    <div class="home-first-screen-button">
+                        <a class="btn-download" href="#">
+                            <!-- FIXME: убрать тег button -->
+                            <span>Download</span>
+                        </a>
+                        <a class="btn-learn-more" href="#">
+                            <!-- FIXME: убрать тег button -->
+                            <span>Learn More</span>
+                        </a>
+                    </div>
+                    <div class="home-content-available">
+                        <span>Available on :</span>
 
-                <!-- FIXME: сделать ссылками -->
-                <a href="#" class="mobile-icon"><img src="assets/img/apple.png"></a>
-                <a href="#" class="mobile-icon"><img src="assets/img/android.png"></a>
+                        <!-- FIXME: сделать ссылками -->
+                        <a href="#" class="mobile-icon"><img src="assets/img/apple.png"></a>
+                        <a href="#" class="mobile-icon"><img src="assets/img/android.png"></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="content-text">
+
+                        <span class="content-head">Simple, Beautiful <span class="content-head__bold">and Amazing</span></span>
+                        <span class="content-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget nunc vitae tellus luctus
+                            ullamcorper. Nam porttitor ullamcorper felis at convallis. Aenean ornare vestibulum nisi
+                            fringilla lacinia. Nullam pulvinar sollicitudin velit id laoreet. Quisque non rhoncus sem.</span>
+                    </div>
+                    <div class="home-first-screen-button">
+                        <a class="btn-download" href="#">
+                            <!-- FIXME: убрать тег button -->
+                            <span>Download</span>
+                        </a>
+                        <a class="btn-learn-more" href="#">
+                            <!-- FIXME: убрать тег button -->
+                            <span>Learn More</span>
+                        </a>
+                    </div>
+                    <div class="home-content-available">
+                        <span>Available on :</span>
+
+                        <!-- FIXME: сделать ссылками -->
+                        <a href="#" class="mobile-icon"><img src="assets/img/apple.png"></a>
+                        <a href="#" class="mobile-icon"><img src="assets/img/android.png"></a>
+                    </div>
+                </div>
             </div>
+
+            <!--FIXME: конец слайда -->
         </div>
-        <!--FIXME: конец слайда -->
     </div>
+
 </div>
 <section class="home-sections__features">
     <div class="container features-container">
@@ -131,8 +167,15 @@
             <!-- FIXME: сделать через сетку -->
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="gallery-content">
-                    <div class="img-overlay"><div class="plus"><img src="assets/img/plus.png"></div></div>
-                    <img class="img-gallery" src="assets/img/gallery2.png">
+                    <a class="img-overlay" data-fancybox="group1" href="assets/img/1.png">
+                        <div>
+                            <div class="plus">
+                                <img src="assets/img/plus.png">
+                            </div>
+                        </div>
+                    </a>
+
+                    <img class="img-gallery" src="assets/img/1.png">
 
                     <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa
                         idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
@@ -140,25 +183,43 @@
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="gallery-content">
+                    <a class="img-overlay" data-fancybox="group1" href="assets/img/2.png">
+                        <div>
+                            <div class="plus">
+                                <img src="assets/img/plus.png">
+                            </div>
+                        </div>
+                    </a>
 
-                    <div class="img-overlay"><div class="plus"><img src="assets/img/plus.png"></div></div>
-                    <img class="img-gallery" src="assets/img/gallery2.png">
+                    <img class="img-gallery" src="assets/img/2.png">
                     <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta
                         nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="gallery-content">
-                    <div class="img-overlay"><div class="plus"><img src="assets/img/plus.png"></div></div>
-                    <img class="img-gallery" src="assets/img/gallery3.png">
+                    <a class="img-overlay" data-fancybox="group1" href="assets/img/3.png">
+                        <div>
+                            <div class="plus">
+                                <img src="assets/img/plus.png">
+                            </div>
+                        </div>
+                    </a>
+                    <img class="img-gallery" src="assets/img/3.png">
                     <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque
                         mi id faucibus iaculis vitae pulvinar.</span>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="gallery-content">
-                    <div class="img-overlay"><div class="plus"><img src="assets/img/plus.png"></div></div>
-                    <img class="img-gallery" src="assets/img/gallery4.png">
+                    <a class="img-overlay" data-fancybox="group1" href="assets/img/4.png">
+                        <div>
+                            <div class="plus">
+                                <img src="assets/img/plus.png">
+                            </div>
+                        </div>
+                    </a>
+                    <img class="img-gallery" src="assets/img/4.png">
                     <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta
                         nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
                 </div>
@@ -253,17 +314,32 @@
         <span class="testimonials-header">Testimonials</span>
         <div class="testimonials-content">
             <!--FIXME: Начало слайда -->
-            <div>
-                <div class="testimonials-content__icon">
-                    <img src="assets/img/testimonials.png">
-                </div>
-                <div class="testimonials-content_text">
+            <div class="slick-container slick-testimonials">
+                <div>
+                    <div class="testimonials-content__icon">
+                        <img src="assets/img/testimonials.png">
+                    </div>
+                    <div class="testimonials-content_text">
                         <span class="testimonials-content_text__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Praesent lobortis lectus eget libero blandit venenatis.
                             In blandit tortor vel congue malesuada. Suspendisse
                             molestie lobortis lorem dignissim pretium.<br>
                             <span class="testimonials-content_text__author">John Doe<br> from some company</span>
                         </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="testimonials-content__icon">
+                        <img src="assets/img/testimonials.png">
+                    </div>
+                    <div class="testimonials-content_text">
+                        <span class="testimonials-content_text__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Praesent lobortis lectus eget libero blandit venenatis.
+                            In blandit tortor vel congue malesuada. Suspendisse
+                            molestie lobortis lorem dignissim pretium.<br>
+                            <span class="testimonials-content_text__author">John Doe<br> from some company</span>
+                        </span>
+                    </div>
                 </div>
             </div>
             <!--FIXME: конец слайда -->
@@ -284,14 +360,14 @@
 <section class="map">
     <div class="container map-container">
         <div class="contact-form">
-            <form method="post">
+            <form class="form" method="post" action="ajaxForm.php">
                 <span>Contact</span>
                 <div class="form-item">
-                    <input type="text" name="contactName" class="form-control" placeholder="Your Name">
+                    <input type="text" name="contactName" class="form-control" placeholder="Your Name" required>
                 </div>
 
                 <div class="form-item">
-                    <input type="email" name="contactEmail" class="form-control" placeholder="Your Email">
+                    <input type="email" name="contactEmail" class="form-control" placeholder="Your Email" required>
                 </div>
 
                 <div class="form-item">
@@ -317,5 +393,10 @@
         </div>
     </div>
 </footer>
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="assets/js/slick/slick.min.js"></script>
+<script type="text/javascript" src="assets/js/dist/jquery.fancybox.js"></script>
+<script src="assets/js/scripts.js"></script>
 </body>
 </html>
