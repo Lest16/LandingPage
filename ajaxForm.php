@@ -1,18 +1,25 @@
 <?
 include_once 'config.php';
 header("Content-Type: text/html; charset=UTF-8");
-$name = htmlentities($_POST['name']);
-if(!preg_match('([А-ЯЁ]{1}[а-яё]{1,29}|[A-Z]{1}[a-z]{1,29})', $name)){
-    echo "ERROR";
-}
-
+$name = htmlentities($_POST['contactName']);
 $message = htmlentities($_POST['message']);
 $serverName = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 $subject = htmlentities($_POST['subject']);
-$emailTo = htmlentities($_POST['email']);
+$emailTo = htmlentities($_POST['contactEmail']);
+$phone = htmlentities($_POST['contactPhone']);
 
-if(!valid_email($emailTo)){
-    echo "ERROR";
+$errorArray = array();
+
+if(!validName($name)){
+    $errorArray['contactName'] = "Неправильно введено имя";
+}
+
+if(!validEmail($emailTo)){
+    $errorArray['contactEmail'] = "Неправильно введен email";
+}
+
+if(!validPhone($phone)){
+    $errorArray['contactPhone'] = "Неправильно введен телефон";
 }
 
 $dateOpenForm = htmlentities($_POST['dateOpenForm']);
@@ -29,10 +36,15 @@ if (mail($emailTo, "Вам пришло письмо с сайта $serverName",
     \nВремя отправки данных с формы: $dateSendForm
     \nВремя заполения формы: " . $diffDate->format("%H:%I:%S"),
     "From: $emailFrom \r\n")) {
-    echo "OK";
 }
 else {
-    echo "ERROR";
+    $errorArray['error'] = 'Письмо не удалось отправить, повторите попытку';
+}
+
+if(empty($errorArray)){
+    echo json_encode(array('result' => 'success'));
+}else{
+    echo json_encode(array('result' => 'error', 'fieldError' => $errorArray));
 }
 
 $dsn = "mysql:host=$db_host;port=$db_port;dbname=$db_base;charset=$charset;";
@@ -51,7 +63,7 @@ $stmt->execute(array($name, $emailTo, $subject, $message, $dateOpenForm,
 
 $stmt = $pdo->query('SELECT * FROM contacts');
 
-while ($row = $stmt->fetch())
+/*while ($row = $stmt->fetch())
 {
     echo $row["id"] . ' 
 ' . $row["name"] . ' 
@@ -61,9 +73,17 @@ while ($row = $stmt->fetch())
 ' . $row["date_open_form"] . ' 
 ' . $row["date_send_form"] . ' 
 ' . $row["diff_date"] . ' <br />';
+}*/
+
+function validEmail($str) {
+    return (!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $str)) ? FALSE : TRUE;
 }
 
-function valid_email($str) {
-    return (!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $str)) ? FALSE : TRUE;
+function validName($str) {
+    return (!preg_match("([А-ЯЁ]{1}[а-яё]{1,29}|[A-Z]{1}[a-z]{1,29})", $str)) ? FALSE : TRUE;
+}
+
+function validPhone($str) {
+    return (!preg_match("/^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/", $str)) ? FALSE : TRUE;
 }
 ?>
