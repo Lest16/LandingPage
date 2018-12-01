@@ -4,9 +4,8 @@ $(".form").on("submit", sendForm);
 function sendForm(e) {
     e.preventDefault();
     var data = $(".form").serialize();
-    $('input').each(function(){
-        $(this).removeClass('error-input');
-    });
+    $('input').removeClass('error-input');
+    $('.error').hide();
     $.ajax({
         url :"ajaxForm.php",
         type : "POST",
@@ -24,6 +23,8 @@ function sendForm(e) {
             }else{
                 for(var errorField in data.fieldError){
                     $('input[name='+errorField+']').addClass('error-input');
+                    $('.'+errorField).html(data.fieldError[errorField]);
+                    $('.'+errorField).show();
                 }
             }
         }

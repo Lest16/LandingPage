@@ -10,15 +10,15 @@ $phone = htmlentities($_POST['contactPhone']);
 
 $errorArray = array();
 
-if(!validName($name)){
+if(!validField($name, "([А-ЯЁ]{1}[а-яё]{1,29}|[A-Z]{1}[a-z]{1,29})")){
     $errorArray['contactName'] = "Неправильно введено имя";
 }
 
-if(!validEmail($emailTo)){
+if(!validField($emailTo, "/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix")){
     $errorArray['contactEmail'] = "Неправильно введен email";
 }
 
-if(!validPhone($phone)){
+if(!validField($phone, "/^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/")){
     $errorArray['contactPhone'] = "Неправильно введен телефон";
 }
 
@@ -27,22 +27,19 @@ $dateOpenFormClass = new DateTime($dateOpenForm);
 $dateSendForm = date('Y-m-d H:i:s');
 $dateSendFormClass = new DateTime($dateSendForm);
 $diffDate = $dateOpenFormClass->diff($dateSendFormClass);
+$diffDateFormat = $diffDate->format("%H:%I:%S");
 
-if (mail($emailTo, "Вам пришло письмо с сайта $serverName",
-    "Ваше имя: $name
+if(empty($errorArray)){
+    mail($emailTo, "Вам пришло письмо с сайта $serverName",
+        "Ваше имя: $name
     \nТема: $subject
     \nВаше сообщение: $message
     \nВремя открытия формы: $dateOpenForm
     \nВремя отправки данных с формы: $dateSendForm
-    \nВремя заполения формы: " . $diffDate->format("%H:%I:%S"),
-    "From: $emailFrom \r\n")) {
-}
-else {
-    $errorArray['error'] = 'Письмо не удалось отправить, повторите попытку';
-}
-
-if(empty($errorArray)){
+    \nВремя заполения формы: " . $diffDateFormat,
+        "From: $emailFrom \r\n");
     echo json_encode(array('result' => 'success'));
+
 }else{
     echo json_encode(array('result' => 'error', 'fieldError' => $errorArray));
 }
@@ -59,7 +56,7 @@ $pdo = new PDO($dsn, $db_user, $db_password, $opt);
 $stmt = $pdo->prepare('INSERT INTO contacts (name, email, subject, message, date_open_form, date_send_form, diff_date) 
                       VALUES (?, ?, ?, ? ,? ,? ,?)');
 $stmt->execute(array($name, $emailTo, $subject, $message, $dateOpenForm,
-    $dateSendForm, $diffDate->format("%H:%I:%S")));
+    $dateSendForm, $diffDateFormat));
 
 $stmt = $pdo->query('SELECT * FROM contacts');
 
@@ -75,15 +72,7 @@ $stmt = $pdo->query('SELECT * FROM contacts');
 ' . $row["diff_date"] . ' <br />';
 }*/
 
-function validEmail($str) {
-    return (!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $str)) ? FALSE : TRUE;
-}
-
-function validName($str) {
-    return (!preg_match("([А-ЯЁ]{1}[а-яё]{1,29}|[A-Z]{1}[a-z]{1,29})", $str)) ? FALSE : TRUE;
-}
-
-function validPhone($str) {
-    return (!preg_match("/^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/", $str)) ? FALSE : TRUE;
+function validField($field, $regex) {
+    return (!preg_match($regex, $field)) ? FALSE : TRUE;
 }
 ?>

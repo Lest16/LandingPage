@@ -854,6 +854,10 @@ a:hover {
     border: 2px solid #FF0000;
 }
 
+.error{
+    display: none;
+}
+
 /* Футер*/
 .footer {
 

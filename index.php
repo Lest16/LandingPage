@@ -364,14 +364,17 @@
             <span>Contact</span>
             <div class="form-item">
                 <input type="text" name="contactName" class="form-control" placeholder="Your Name" required>
+                <label class="contactName error"></label>
             </div>
 
             <div class="form-item">
                 <input type="email" name="contactEmail" class="form-control" placeholder="Your Email" required>
+                <label class="contactEmail error"></label>
             </div>
 
             <div class="form-item">
                 <input type="phone" name="contactPhone" class="form-control" placeholder="Your Phone">
+                <label class="contactPhone error"></label>
             </div>
 
             <div class="form-item">
