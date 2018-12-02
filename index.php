@@ -38,61 +38,65 @@
             <!--FIXME: Начало слайда -->
             <div class="slick-container slick-home">
                 <div>
-                    <div class="content-text">
-
-                        <span class="content-head">Simple, Beautiful <span class="content-head__bold">and Amazing</span></span>
-                        <span class="content-description">
+                    <div class="div-derma">
+                        <div class="content-text">
+                            <span class="content-head">Simple, Beautiful <span class="content-head__bold">and Amazing</span></span>
+                            <span class="content-description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget nunc vitae tellus luctus
                             ullamcorper. Nam porttitor ullamcorper felis at convallis. Aenean ornare vestibulum nisi
                             fringilla lacinia. Nullam pulvinar sollicitudin velit id laoreet. Quisque non rhoncus sem.</span>
-                    </div>
-                    <div class="home-first-screen-button">
-                        <a class="btn-download" href="#">
-                            <!-- FIXME: убрать тег button -->
-                            <span>Download</span>
-                        </a>
-                        <a class="btn-learn-more" href="#">
-                            <!-- FIXME: убрать тег button -->
-                            <span>Learn More</span>
-                        </a>
-                    </div>
-                    <div class="home-content-available">
-                        <span>Available on :</span>
+                        </div>
+                        <div class="home-first-screen-button">
+                            <a class="btn-download" href="#">
+                                <!-- FIXME: убрать тег button -->
+                                <span>Download</span>
+                            </a>
+                            <a class="btn-learn-more" href="#">
+                                <!-- FIXME: убрать тег button -->
+                                <span>Learn More</span>
+                            </a>
+                        </div>
+                        <div class="home-content-available">
+                            <span>Available on :</span>
 
-                        <!-- FIXME: сделать ссылками -->
-                        <a href="#" class="mobile-icon"><img src="assets/img/apple.png"></a>
-                        <a href="#" class="mobile-icon"><img src="assets/img/android.png"></a>
+                            <!-- FIXME: сделать ссылками -->
+                            <a href="#" class="mobile-icon"><img src="assets/img/apple.png"></a>
+                            <a href="#" class="mobile-icon"><img src="assets/img/android.png"></a>
+                        </div>
                     </div>
+
                 </div>
                 <div>
-                    <div class="content-text">
+                    <div class="div-derma">
+                        <div class="content-text">
 
-                        <span class="content-head">Simple, Beautiful <span class="content-head__bold">and Amazing</span></span>
-                        <span class="content-description">
+                            <span class="content-head">Simple, Beautiful <span class="content-head__bold">and Amazing</span></span>
+                            <span class="content-description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget nunc vitae tellus luctus
                             ullamcorper. Nam porttitor ullamcorper felis at convallis. Aenean ornare vestibulum nisi
                             fringilla lacinia. Nullam pulvinar sollicitudin velit id laoreet. Quisque non rhoncus sem.</span>
-                    </div>
-                    <div class="home-first-screen-button">
-                        <a class="btn-download" href="#">
-                            <!-- FIXME: убрать тег button -->
-                            <span>Download</span>
-                        </a>
-                        <a class="btn-learn-more" href="#">
-                            <!-- FIXME: убрать тег button -->
-                            <span>Learn More</span>
-                        </a>
-                    </div>
-                    <div class="home-content-available">
-                        <span>Available on :</span>
+                        </div>
+                        <div class="home-first-screen-button">
+                            <a class="btn-download" href="#">
+                                <!-- FIXME: убрать тег button -->
+                                <span>Download</span>
+                            </a>
+                            <a class="btn-learn-more" href="#">
+                                <!-- FIXME: убрать тег button -->
+                                <span>Learn More</span>
+                            </a>
+                        </div>
+                        <div class="home-content-available">
+                            <span>Available on :</span>
 
-                        <!-- FIXME: сделать ссылками -->
-                        <a href="#" class="mobile-icon"><img src="assets/img/apple.png"></a>
-                        <a href="#" class="mobile-icon"><img src="assets/img/android.png"></a>
+                            <!-- FIXME: сделать ссылками -->
+                            <a href="#" class="mobile-icon"><img src="assets/img/apple.png"></a>
+                            <a href="#" class="mobile-icon"><img src="assets/img/android.png"></a>
+                        </div>
                     </div>
+
                 </div>
             </div>
-
             <!--FIXME: конец слайда -->
         </div>
     </div>
@@ -175,7 +179,10 @@
                         </div>
                     </a>
 
-                    <img class="img-gallery" src="assets/img/1.png">
+                    <div class="item-image">
+                        <img class="img-gallery" src="assets/img/1.png">
+                        <span class="screenshot">SCREEN SHOT #1</span>
+                    </div>
 
                     <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa
                         idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
@@ -191,7 +198,10 @@
                         </div>
                     </a>
 
-                    <img class="img-gallery" src="assets/img/2.png">
+                    <div class="item-image">
+                        <img class="img-gallery" src="assets/img/2.png">
+                        <span class="screenshot">SCREEN SHOT #2</span>
+                    </div>
                     <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta
                         nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
                 </div>
@@ -205,7 +215,10 @@
                             </div>
                         </div>
                     </a>
-                    <img class="img-gallery" src="assets/img/3.png">
+                    <div class="item-image">
+                        <img class="img-gallery" src="assets/img/3.png">
+                        <span class="screenshot">SCREEN SHOT #3</span>
+                    </div>
                     <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque
                         mi id faucibus iaculis vitae pulvinar.</span>
                 </div>
@@ -219,7 +232,10 @@
                             </div>
                         </div>
                     </a>
-                    <img class="img-gallery" src="assets/img/4.png">
+                    <div class="item-image">
+                        <img class="img-gallery" src="assets/img/4.png">
+                        <span class="screenshot">SCREEN SHOT #4</span>
+                    </div>
                     <span class="feature-text">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta
                         nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
                 </div>
@@ -315,7 +331,7 @@
         <div class="testimonials-content">
             <!--FIXME: Начало слайда -->
             <div class="slick-container slick-testimonials">
-                <div>
+                <div class="testimonials-slider">
                     <div class="testimonials-content__icon">
                         <img src="assets/img/testimonials.png">
                     </div>
@@ -328,7 +344,7 @@
                         </span>
                     </div>
                 </div>
-                <div>
+                <div class="testimonials-slider">
                     <div class="testimonials-content__icon">
                         <img src="assets/img/testimonials.png">
                     </div>

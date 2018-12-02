@@ -53,9 +53,9 @@ $opt = [
 
 $pdo = new PDO($dsn, $db_user, $db_password, $opt);
 
-$stmt = $pdo->prepare('INSERT INTO contacts (name, email, subject, message, date_open_form, date_send_form, diff_date) 
-                      VALUES (?, ?, ?, ? ,? ,? ,?)');
-$stmt->execute(array($name, $emailTo, $subject, $message, $dateOpenForm,
+$stmt = $pdo->prepare('INSERT INTO contacts (name, email, phone, subject, message, date_open_form, date_send_form, diff_date) 
+                      VALUES (?, ?, ?, ?, ? ,? ,? ,?)');
+$stmt->execute(array($name, $emailTo, $phone, $subject, $message, $dateOpenForm,
     $dateSendForm, $diffDateFormat));
 
 $stmt = $pdo->query('SELECT * FROM contacts');
