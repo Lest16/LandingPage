@@ -1,5 +1,7 @@
 <?
 include_once 'config.php';
+include_once 'pdoConnector.php';
+include_once 'mailer.php';
 header("Content-Type: text/html; charset=UTF-8");
 $name = htmlentities($_POST['contactName']);
 $message = htmlentities($_POST['message']);
@@ -30,6 +32,7 @@ $diffDate = $dateOpenFormClass->diff($dateSendFormClass);
 $diffDateFormat = $diffDate->format("%H:%I:%S");
 
 if(empty($errorArray)){
+    /*
     mail($emailTo, "Вам пришло письмо с сайта $serverName",
         "Ваше имя: $name
     \nТема: $subject
@@ -37,21 +40,27 @@ if(empty($errorArray)){
     \nВремя открытия формы: $dateOpenForm
     \nВремя отправки данных с формы: $dateSendForm
     \nВремя заполения формы: " . $diffDateFormat,
-        "From: $emailFrom \r\n");
+        "From: $emailFrom \r\n");*/
+    Mailer()->init($config);
+
+    $messageText = "Ваше имя: $name
+    <br>Тема: $subject
+    <br>Ваше сообщение: $message
+    <br>Ваш телефон: $phone
+    <br>Время открытия формы: $dateOpenForm
+    <br>Время отправки данных с формы: $dateSendForm
+    <br>Время заполения формы: " . $diffDateFormat;
+    $messageMailer = Mailer()->newHtmlMessage();
+    $messageMailer->setSubject("Вам пришло письмо с сайта $serverName");
+    $messageMailer->setSenderEmail($emailFrom);
+    $messageMailer->addRecipient($emailTo);
+    $messageMailer->addContent($messageText);
+    Mailer()->sendMessage($messageMailer);
     echo json_encode(array('result' => 'success'));
 
 }else{
     echo json_encode(array('result' => 'error', 'fieldError' => $errorArray));
 }
-
-$dsn = "mysql:host=$db_host;port=$db_port;dbname=$db_base;charset=$charset;";
-$opt = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,
-];
-
-$pdo = new PDO($dsn, $db_user, $db_password, $opt);
 
 $stmt = $pdo->prepare('INSERT INTO contacts (name, email, phone, subject, message, date_open_form, date_send_form, diff_date) 
                       VALUES (?, ?, ?, ?, ? ,? ,? ,?)');
